@@ -376,7 +376,8 @@
 		$querySQL = "fname='" .$par[2]. "', lname='" .$par[3]. "', idusr='" .$par[4]. "', idusraux='" .$par[5]. "', alias='" .$par[6]. "', pword='" .$par[7]. "', type='" .$par[8]. "', status='" .$par[9]. "', lang='" .$par[10]. "', birth='" .$par[11]. "', sex='" .$par[12]. "', matrim='" .$par[13]. "', educ='" .$par[14]. "', prof='" .$par[15]. "', profcode='" .$par[16]. "', rev='" .$par[17]. "', revcode='" .$par[18]. "', hphone='" .$par[19]. "', hfax='" .$par[20]. "', cphone='" .$par[21]. "', haval1f='" .$par[22]. "', haval1t='" .$par[23]. "', haval2f='" .$par[24]. "', haval2t='" .$par[25]. "', haval3f='" .$par[26]. "', haval3t='" .$par[27]. "', hemail='" .$par[28]. "', haddress='" .$par[29]. "', haddressx='" .$par[30]. "', hcity='" .$par[31]. "', hstate='" .$par[32]. "', hcountry='" .$par[33]. "', hpostal='" .$par[34]. "', hdate='" .$par[35]. "', hlat='" .$par[36]. "', hlng='" .$par[37]. "', hzone1='" .$z1. "', hzone2='" .$z2. "', hzone3='" .$z3. "', workplace='" .$par[41]. "', wposition='" .$par[42]. "', wdate='" .$par[43]. "', wphone='" .$par[44]. "', wfax='" .$par[45]. "', waval1f='" .$par[46]. "', waval1t='" .$par[47]. "', wemail='" .$par[48]. "', waddress='" .$par[49]. "', waddressx='" .$par[50]. "', wcity='" .$par[51]. "', wstate='" .$par[52]. "', wcountry='" .$par[53]. "', wpostal='" .$par[54]. "', wlat='" .$par[55]. "', wlng='" .$par[56]. "', wzone1='" .$z4. "', wzone2='" .$z5. "', wzone3='" .$z6. "', social='" .$par[60]. "', xcontact1='" .$par[61]. "', xcontact2='" .$par[62]. "', xcontact3='" .$par[63]. "', cust1='" .$par[64]. "', cust2='" .$par[65]. "', cust3='" .$par[66]. "', cust4='" .$par[67]. "', cust5='" .$par[68]. "', cust6='" .$par[69]. "', cust7='" .$par[70]. "', cust8='" .$par[71]. "', cust9='" .$par[72]. "', checklist='" .$par[73]. "', phase='" .$par[74]. "', step='" .$par[75]. "', xgroup='" .$par[76]. "', dateedit='" .date("Y-m-d", $td). "', comments='" .$par[78]. "'";
 		if ($id == "")			//insert
 		{
-			$querySQL = "insert into " .$userstbl. " set id='NULL', " . $querySQL;
+			$querySQL = "insert into " .$userstbl. " set  " . $querySQL;
+      //file_put_contents("err_out",$querySQL);
 		}
 		else
 		{
@@ -2726,7 +2727,7 @@
 	}
 	
 	
-	$userstbl = "usersx";		//usersgpmt, users, ...
+	$userstbl = "users";		//usersgpmt, users, ...
 	$retvar = "-er-post-";
 	$pvarx = "";
 	if(isset($_POST['pvar'])){$pvarx = $_POST['pvar'];}elseif(isset($_GET['pvar'])){$pvarx = $_GET['pvar'];}
