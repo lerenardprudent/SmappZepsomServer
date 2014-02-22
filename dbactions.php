@@ -2726,7 +2726,7 @@
 	}
 	
 	
-	$userstbl = "users";		//usersgpmt, users, ...
+	$userstbl = "usersx";		//usersgpmt, users, ...
 	$retvar = "-er-post-";
 	$pvarx = "";
 	if(isset($_POST['pvar'])){$pvarx = $_POST['pvar'];}elseif(isset($_GET['pvar'])){$pvarx = $_GET['pvar'];}
